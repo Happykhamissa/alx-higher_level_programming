@@ -10,7 +10,7 @@ if __name__ == "__main__":
     result_mul = mul(a, b)
     result_div = div(a, b)
 
-    print(f"{a} + {b} = {result_add}")
-    print(f"{a} - {b} = {result_sub}")
-    print(f"{a} * {b} = {result_mul}")
-    print(f"{a} / {b} = {result_div}")
+    print("{a} + {b} = {result_add}".format(a=a, b=b, result_add=result_add))
+    print("{a} - {b} = {result_sub}".format(a=a, b=b, result_sub=result_sub))
+    print("{a} * {b} = {result_mul}".format(a=a, b=b, result_mul=result_mul))
+    print("{a} / {b} = {result_div}".format(a=a, b=b, result_div=result_div))
