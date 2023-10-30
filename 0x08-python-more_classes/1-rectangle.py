@@ -38,6 +38,10 @@ class Rectangle:
         self.__height = value
 
     @property
-    def __dict__(self):
+    def __dict__(self, value):
         """Rectangle height setter"""
-        return {'_Rectangle__height': self.__height, '_Rectangle__width': self.__width}
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
