@@ -1,15 +1,23 @@
 #!/usr/bin/python3
+"""define a Rectangle"""
+
+
 class Rectangle:
+    """Rectangle class"""
+
     def __init__(self, width=0, height=0):
+        """init for Rectangle"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """Rectangle width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Rectangle width setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -37,6 +45,7 @@ class Rectangle:
         else: return (2 * (self.width + self.height))
 
     def __str__(self):
+        """prints the rectangle"""
         if self.width == 0 or self.height == 0:
             return ""
         return "\n".join(["#" * self.width for _ in range(self.height)])
