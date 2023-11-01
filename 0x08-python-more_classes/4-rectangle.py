@@ -1,15 +1,23 @@
 #!/usr/bin/python3
+"""define a Rectangle"""
+
+
 class Rectangle:
+    """Rectangle class"""
+
     def __init__(self, width=0, height=0):
+        """init for Rectangle"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """Rectangle width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Rectangle width setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -18,10 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Rectangle height getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Rectangle height setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -29,17 +39,23 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Rectangle area getter"""
         return self.width * self.height
 
     def perimeter(self):
+        """returns the perimeter of the Rectangle,
+        or nothing if height/width are 0"""
         if self.width == 0 or self.height == 0:
             return 0
-        else: return (2 * (self.width + self.height))
+        else:
+            return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """prints the rectangle"""
         if self.width == 0 or self.height == 0:
             return ""
         return "\n".join(["#" * self.width for _ in range(self.height)])
 
     def __repr__(self):
+        """returns representation of the Rectangle"""
         return f"Rectangle({self.width}, {self.height})"
