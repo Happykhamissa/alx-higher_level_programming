@@ -8,7 +8,7 @@ Define read_file function.
 
 def write_file(filename="", text=""):
     """
-    Writes a string to a text file (UTF-8) and returns the number of characters written.
+    Writes a string to a text file and returns the number of char.
 
     :param filename: The name of the file to write to.
     :param text: The string to write to the file.
