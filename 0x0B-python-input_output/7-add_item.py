@@ -9,6 +9,7 @@ Define read_file function.
 import sys
 from os.path import exists
 
+
 def save_to_json_file(my_obj, filename):
     """
     Writes an object to a text file using a JSON representation.
@@ -21,6 +22,7 @@ def save_to_json_file(my_obj, filename):
     with open(filename, mode="w", encoding="utf-8") as file:
         json.dump(my_obj, file, ensure_ascii=False)
 
+
 def load_from_json_file(filename):
     """
     Creates an object from a "JSON file".
@@ -32,6 +34,7 @@ def load_from_json_file(filename):
 
     with open(filename, mode="r", encoding="utf-8") as file:
         return json.load(file)
+
 
 if __name__ == "__main__":
     # Check if the file exists, create an empty list if it doesn't
