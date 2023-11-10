@@ -16,6 +16,11 @@ def class_to_json(obj):
     if hasattr(obj, "__dict__"):
         return obj.__dict__
     elif hasattr(obj, "__slots__"):
-        return {slot: getattr(obj, slot) for slot in obj.__slots__ if hasattr(obj, slot)}
+        result = {}
+        if hasattr(obj, '__slots__'):
+            for slot in getattr(obj, '__slots__'):
+                if hasattr(obj, slot):
+                    result[slot] = getattr(obj, slot)
+
     else:
         raise TypeError("Unsupported object type for JSON serialization")
