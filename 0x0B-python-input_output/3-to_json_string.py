@@ -6,20 +6,8 @@ Define read_file function.
 """
 
 
-def append_write(filename="", text=""):
-    """
-    Appends a string at the end of a text file (UTF-8) and returns the number of characters added.
+import json
 
-    :param filename: The name of the file to append to.
-    :param text: The string to append to the file.
-    :return: The number of characters added.
-    """
-    try:
-        with open(filename, mode="a", encoding="utf-8") as file:
-            file.seek(0, 2)  # Move to the end of the file
-            num_characters = file.write(text)
-            return num_characters
-    except FileNotFoundError:
-        with open(filename, mode="w", encoding="utf-8") as file:
-            num_characters = file.write(text)
-            return num_characters
+def to_json_string(my_obj):
+    """Returns the JSON representation of an object (string)."""
+    return json.dumps(my_obj)
