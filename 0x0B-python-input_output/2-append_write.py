@@ -8,7 +8,7 @@ Define read_file function.
 
 def append_write(filename="", text=""):
     """
-    Appends a string at the end of a text file (UTF-8) and returns the number of characters added.
+    Appends a string at the end of a text file, returns the num of char added.
 
     :param filename: The name of the file to append to.
     :param text: The string to append to the file.
