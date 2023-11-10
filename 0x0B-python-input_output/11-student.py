@@ -27,7 +27,7 @@ class Student:
         """
         Retrieves a dictionary representation of a Student instance.
 
-        :param attrs: List of attribute names to retrieve. If None, retrieve all attributes.
+        :param attrs: List of attribute names to retrieve.
         :return: Dictionary representation of the Student instance.
         """
         if attrs is None:
@@ -37,11 +37,15 @@ class Student:
                 'age': self.age
             }
         else:
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            result = {}
+            for attr in attrs:
+                if hasattr(self, attr):
+                    result[attr] = getattr(self, attr)
+            return result
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance with values from a dictionary.
+        Replaces attributes of the Student with values from a dictionary.
 
         :param json: Dictionary containing attribute names and their values.
         """
