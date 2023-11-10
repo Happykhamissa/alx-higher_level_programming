@@ -27,7 +27,7 @@ class Student:
         """
         Retrieves a dictionary representation of a Student instance.
 
-        :param attrs: List of attribute names to retrieve. If None, retrieve all attributes.
+        :param attrs: List of attribute names to retrieve
         :return: Dictionary representation of the Student instance.
         """
         if attrs is None:
@@ -37,4 +37,8 @@ class Student:
                 'age': self.age
             }
         else:
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            result = {}
+            for attr in attrs:
+                if hasattr(self, attr):
+                    result[attr] = getattr(self, attr)
+            return result
