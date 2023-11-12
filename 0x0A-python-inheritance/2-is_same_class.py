@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines a class"""
 
+
 def is_same_class(obj, a_class):
     """
     Checks if the object is exactly an instance of the specified class.
@@ -10,6 +11,6 @@ def is_same_class(obj, a_class):
     a_class: Specified class to compare against.
 
     Returns:
-    bool: True if the object is an instance of the specified class; otherwise False.
+    bool: True or False.
     """
     return type(obj) is a_class
