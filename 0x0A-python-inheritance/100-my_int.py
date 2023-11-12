@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""defines a class"""
+
+
 class MyInt(int):
     """
     MyInt class inherits from int with inverted == and != operators.
