@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines a class"""
 
+
 class MyList(list):
     """
     MyList class inherits from the list class and provides additional methods.
