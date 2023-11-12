@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines a class"""
 
+
 def lookup(obj):
     """
     Returns a list of available attributes and methods of an object.
