@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines a class"""
 
+
 class BaseGeometry:
     """
     A class representing Base Geometry.
@@ -14,7 +15,8 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-        Validates the value. Raises exceptions for non-integer and non-positive values.
+        Validates the value. Raises exceptions for non-integer
+        and non-positive values.
 
         Parameters:
         name (str): Name of the value.
